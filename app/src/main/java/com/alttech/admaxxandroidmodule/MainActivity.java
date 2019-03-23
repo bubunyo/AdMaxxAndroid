@@ -40,9 +40,12 @@ public class MainActivity extends AppCompatActivity {
     // 4 - Request Ad
     AdMaxx.get().requestAd();
 
-    // 5 - once and ad has finished playing register this impression.
+    // 5 - when the ad start playing call this to notify the ad server that the ad started playing
+    AdMaxx.get().registerAdStart();
+
+    // 6 - once and ad has finished playing register this impression.
     AdMaxx.get().registerImpression();
 
-    //6 - call request ad anytime you need an ad
+    //7 - call request ad anytime you need an ad
   }
 }

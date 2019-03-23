@@ -78,6 +78,13 @@ public class AdMaxx {
       }
   }
 
+  public void registerAdStart() {
+    if (ad != null)
+      for (Ad.Tracking imp : ad.linear.trackingEvents) {
+        registerEvent(imp.eventUrl);
+      }
+  }
+
   void registerCreateView() {
     if (ad != null)
       for (Ad.Tracking imp : ad.companionAd.trackingEvents) {
